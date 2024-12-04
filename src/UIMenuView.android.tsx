@@ -7,7 +7,7 @@ import {
 import type { MenuComponentRef, NativeMenuComponentProps } from "./types";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
-const NativeMenuComponent = requireNativeComponent(
+export const NativeMenuComponent = requireNativeComponent(
 	"MenuView",
 ) as HostComponent<NativeMenuComponentProps>;
 
@@ -24,7 +24,7 @@ const MenuComponent = forwardRef<MenuComponentRef, NativeMenuComponentProps>(
 						const command =
 							UIManager.getViewManagerConfig("MenuView").Commands.show;
 
-						UIManager.dispatchViewManagerCommand(node, command, undefined);
+						UIManager.dispatchViewManagerCommand(node, command, []);
 					}
 				},
 			}),
