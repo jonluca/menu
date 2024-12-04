@@ -7,7 +7,7 @@ import {
 import type { MenuComponentRef, NativeMenuComponentProps } from "./types";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
-export const NativeMenuComponent = requireNativeComponent(
+const NativeMenuComponent = requireNativeComponent(
 	"MenuView",
 ) as HostComponent<NativeMenuComponentProps>;
 
